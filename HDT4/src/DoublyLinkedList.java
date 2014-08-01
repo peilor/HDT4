@@ -1,4 +1,4 @@
-public SinglyLinkedList<E> extends abstractList<E>
+public DoublyLinkedList<E> extends abstractList<E>{
 protected int count;
 protected DoublyLinkedNode<E> head;
 protected DoublyLinkedNode<E> tail;
@@ -49,4 +49,5 @@ public E removeLast()
    }
    count--;
    return temp.value();
+}
 }
