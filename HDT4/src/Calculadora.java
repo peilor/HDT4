@@ -1,5 +1,6 @@
 
 import java.io.*;
+import javax.swing.JOptionPane;
 /**
  *
  * @author Pablo Argueta, Carnet: 13028
@@ -20,6 +21,33 @@ public class Calculadora {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        boolean cont=true;
+        while(cont){
+        int op=Integer.parseInt(JOptionPane.showInputDialog("¿Que tipo de implementación de Stack desea?"
+                + "\n1)ArrayList"
+                + "\n2)Vector"
+                + "\n3)Lista: Simplemente Encadenada"
+                + "\n4)Lista: Doblemente Encadenada"
+                + "\n5)Lista: Circular"
+                + "\n6)Salir"));
+        if(op==1){
+            
+        }else if(op==2){
+            
+        }else if(op==3){
+            
+        }else if(op==4){
+            
+        }else if(op==5){
+            
+        }else if(op==6){
+            JOptionPane.showMessageDialog(null, "Gracias por usar el programa");
+            cont=false;
+        }else{
+            JOptionPane.showMessageDialog(null, "Usted ha ingresado una opcion"
+                    + "");
+            }
+        }
         datos= new StackVector<Integer>();
         String strLinea1=" ";
         String strLinea= " ";		
