@@ -1,7 +1,7 @@
-public abstract class AbstractList<E>
+public abstract class abstractList<E>
        implements List<E>
 {
-   public AbstractList()
+   public abstractList()
    // post: does nothing
    {
    }
@@ -18,3 +18,4 @@ public abstract class AbstractList<E>
   {
 	return -1 != indexOf(value);
   }
+}

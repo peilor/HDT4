@@ -78,3 +78,4 @@ public SinglyLinkedList<E> extends abstractList<E>
       }
       return finger != null;
    }
+}
