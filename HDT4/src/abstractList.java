@@ -1,21 +1,28 @@
-public abstract class abstractList<E>
-       implements List<E>
-{
-   public abstractList()
-   // post: does nothing
-   {
-   }
 
-   public boolean isEmpty()
-   // post: returns true iff list has no elements
-   {
-      return size() == 0;
-   }
-  
-  public boolean contains(E value)
-  // pre: value is not null
-  // post: returns true iff list contains an object equal to value
-  {
-	return -1 != indexOf(value);
-  }
+public abstract class AbstractList<E> implements List <E>{
+
+    //------------------------------------------------------------------------
+    // Constructor:
+    //------------------------------------------------------------------------
+    
+    /**
+     * pre: -
+     * post: -
+     */
+    public AbstractList(){}
+
+    //------------------------------------------------------------------------
+    // Métodos:
+    //------------------------------------------------------------------------
+    
+    /**
+     * Método encargado de revisar si la lista se encuentra vacia.
+     * pre: -
+     * post: regresa tru si está vacia o false si tiene algún dato.
+     */
+    public boolean empty()
+   
+    {
+        return size() == 0;
+    }
 }
