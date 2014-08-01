@@ -1,81 +1,194 @@
-public SinglyLinkedList<E> extends abstractList<E>
-{
+/**
+ * @author Miguel Zea
+ * @author Diego Bran
+ * @author Derek Orbaugh
+ * @author Eduardo Drummond
+ * @author Javier Gracía
+ * | -------------------------------------------------- |
+ * |        Universidad Del Valle De Guatemala          |
+ * | -------------------------------------------------- |
+ * | Algoritmos y Estructuras de Datos.                 |
+ * | Sección 20.                                        |
+ * | Hoja de Trabajo #4.                                |
+ * | 14/08/2012.                                        |
+ * | Descripción: implementación de una calculadora     |
+ * | que evalúe expresiones en fortmato postfix,        |
+ * | aplicando stacks representados con vectores, array |
+ * | lists y listas (simples, dobles y circulares) y    |
+ * | empleando los patrones de diseño factory (para la  |
+ * | selección de la lista y el stack a implementar) y  |
+ * | singleton (para la calculadora).                   |
+ * | -------------------------------------------------- |
+ */
 
-   protected int count; // list size
-   protected Node<E> head; // ref. to first element
+package postfixcalculator;
 
-   public SinglyLinkedList()
-   // post: generates an empty list
-   {
-      head = null;
-      count = 0;
-   }
-   
-   public int size()
-   // post: returns number of elements in list
-  {
-    return count;
-  }
-  
-  public void addFirst(E value)
-  // post: value is added to beginning of list
-  {
-     // note order that things happen:
-     // head is parameter, then assigned
-     head = new Node<E>(value, head);
-     count++;
-  }
-  
-  public E removeFirst()
-  // pre: list is not empty
-  // post: removes and returns value from beginning of list
- {
-     Node<E> temp = head;
-     head = head.next(); // move head down list
-     count--;
-     return temp.value();
-  }
-  
-  public E getFirst()
-  // pre: list is not empty
-  // post: returns first value in list
-  {
-      return head.value();
-  }
-  
-  public void addLast(E value)
-  // post: adds value to end of list
-  {
-      // location for new value
-      Node<E> temp = new Node<E>(value,null);
-      if (head != null)
-     {
-         // pointer to possible tail
-         Node<E> finger = head;
-         while (finger.next() != null)
-         {
+/**
+ * Implementación de una lista simplemente encadenada, mediante el uso de la
+ * clase nodo (Node). Tomado del capítulo 9 del libro Java Structures 
+ * de Duane A. Bailey. NO fueron implementados todos sus métodos.
+ */
+public class SinglyLinkedList<E> extends AbstractList<E> {
+
+    protected int count; // Tamaño de la lista.
+    protected Node<E> head; // Referencia al primer elemento.
+    
+    /**
+     * Pre: ninguna.
+     * Post: genera una lista simplemente encadenada vacía.
+     */
+    public SinglyLinkedList() {
+        head = null;
+        count = 0;
+    }
+    
+    @Override
+    /**
+     * Pre: ninguna.
+     * Post: regresa el número de elementos en la lista.
+     */
+    public int size() {
+        return count;
+    }
+    
+    @Override
+    /**
+     * Pre: ninguna.
+     * Post: el elemento o es agregado al inicio de la lista.
+     */
+    public void addFirst(E o) {
+        head = new Node<E>(o, head);
+        count++;
+    }
+    
+    @Override
+    /**
+     * Pre: ninguna.
+     * Post: el elemento o es agregado al final de la lista.
+     */
+    public void addLast(E o) {
+        if (isEmpty()) {
+            addFirst(o);
+        } else {
+            add(size(), o);
+        }
+    }
+    
+    @Override
+    /**
+     * Pre: la lista no está vacía.
+     * Post: el primer elemento de la lista es retornado y removido.
+     */
+    public E removeFirst() {
+        if(!isEmpty()) {
+            Node<E> temp = head;
+            head = head.next(); // move head down list
+            count--;
+            return temp.value();
+        } else {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+
+    @Override
+    /**
+     * Pre: la lista no está vacía.
+     * Post: el último elemento de la lista es retornado y removido.
+     */
+    public E removeLast() {
+        if (!isEmpty()) {
+            Node<E> finger = head;
+            Node<E> previous = null;
+            while (finger.next() != null) {
+                previous = finger;
                 finger = finger.next();
-         }
-		 
-         finger.setNext(temp);
-      } else head = temp;
-	  
-	  count++;
-	  
-   }
-   
-   
-   public boolean contains(E value)
-   // pre: value is not null
-   // post: returns true iff value is found in list
-  {
-      Node<E> finger = head;
-	  
-      while (finger != null &&
-             !finger.value().equals(value))
-     {
-          finger = finger.next();
-      }
-      return finger != null;
-   }
+            }
+            // Cuando finger es nulo, se ha llegado al final de la lista.
+            if (previous == null) {
+                head = null;
+            } else {
+                // Se resetea el puntero al último elemento.
+                previous.setNext(null);
+            }
+            count--;
+            return finger.value();
+        } else {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+    
+    @Override
+    /**
+     * Pre: 0<= i <= size().
+     * Post: agrega el elemento o en la i-ésima posición de la lista.
+     */
+    public void add(int i, E o) {  
+        if (i == 0) addFirst(o);
+        else if ((i == size()) && isEmpty()) addLast(o);
+        else if ((i >= 0) && (i <= size())) {
+            Node<E> previous = null;
+            Node<E> finger = head;
+            // Se busca a la i-ésima posición, o al final de la lista.
+            while (i > 0) {
+                previous = finger;
+                finger = finger.next();
+                i--;
+            }
+            // Se crea un nuevo elemento para ser insertado en la posición correcta.
+            Node<E> current = new Node<E>(o, finger);
+            count++;
+            // Se establece que el valor previo apunte al nuevo.
+            previous.setNext(current);
+        } else {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+    
+    @Override
+    /**
+     * Pre: 0<= i <= size().
+     * Post: regresa y remueve de la lista el elemento encontrado en el índice
+     * especificado.
+     */
+    public E remove(int i) {
+        if (i == 0) return removeFirst();
+        else if (i == size() - 1) return removeLast();
+        else if ((i >= 0) && (i < size()) && !isEmpty()) {
+            Node<E> previous = null;
+            Node<E> finger = head;
+            // Se búsca al valor indexado, manteniendo la referencia al previo.
+            while (i > 0) {
+                previous = finger;
+                finger = finger.next();
+                i--;
+            }
+            // Se encadenan los elementos previo y siguiente al elemento a remover.
+            previous.setNext(finger.next());
+            count--;
+            // Se retorna el valor del elemento removido.
+            return finger.value();
+        } else {
+            throw new IndexOutOfBoundsException();
+        }
+    }
+    
+    @Override
+    /**
+     * Pre: 0<= i <= size().
+     * Post: regresa el elemento encontrado en el índice especificado.
+     */
+    public E get(int i) {
+        if ((i >= 0) && (i < size()) && !isEmpty()) {
+            Node<E> finger = head;
+            // Se búsca al valor indexado.
+            while (i > 0) {
+                finger = finger.next();
+                i--;
+            }
+            // Se retorna el valor del elemento encontrado.
+            return finger.value();
+        } else {
+            throw new IndexOutOfBoundsException();
+        }
+    }
 }

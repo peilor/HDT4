@@ -1,87 +1,115 @@
+/**
+ * @author Miguel Zea
+ * @author Diego Bran
+ * @author Derek Orbaugh
+ * @author Eduardo Drummond
+ * @author Javier Gracía
+ * | -------------------------------------------------- |
+ * |        Universidad Del Valle De Guatemala          |
+ * | -------------------------------------------------- |
+ * | Algoritmos y Estructuras de Datos.                 |
+ * | Sección 20.                                        |
+ * | Hoja de Trabajo #4.                                |
+ * | 14/08/2012.                                        |
+ * | Descripción: implementación de una calculadora     |
+ * | que evalúe expresiones en fortmato postfix,        |
+ * | aplicando stacks representados con vectores, array |
+ * | lists y listas (simples, dobles y circulares) y    |
+ * | empleando los patrones de diseño factory (para la  |
+ * | selección de la lista y el stack a implementar) y  |
+ * | singleton (para la calculadora).                   |
+ * | -------------------------------------------------- |
+ */
+package postfixcalculator;
 
-import java.util.Iterator;
+/**
+ * Interfaz que presenta una descripción básica de la estructura Lista. Tomado 
+ * del capítulo 10 del libro Java Structures de Duane A. Bailey.
+ */
+public interface List<E> {
 
-public interface List<E> 
-{
-
-   public int size();
-   // post: returns number of elements in list
-
-   public boolean isEmpty();
-   // post: returns true iff list has no elements
-
-   public void clear();
-   // post: empties list
-
-   public void addFirst(E value);
-   // post: value is added to beginning of list
-
-   public void addLast(E value);
-   // post: value is added to end of list
-
-   public E getFirst();
-   // pre: list is not empty
-   // post: returns first value in list
-
-   public E getLast();
-   // pre: list is not empty
-   // post: returns last value in list
-
-   public E removeFirst();
-   // pre: list is not empty
-   // post: removes first value from list
-
-   public E removeLast();
-   // pre: list is not empty
-   // post: removes last value from list
-
-   public E remove(E value);
-   // post: removes and returns element equal to value
-   // otherwise returns null
-
-   public void add(E value);
-   // post: value is added to tail of list
-
-   public E remove();
-   // pre: list has at least one element
-   // post: removes last value found in list
-
-   public E get();
-   // pre: list has at least one element
-   // post: returns last value found in list
-
-   public boolean contains(E value);
-   // pre: value is not null
-   // post: returns true iff list contains an object equal to value
-
-   public int indexOf(E value);
-   // pre: value is not null
-   // post: returns (0-origin) index of value,
-   // or -1 if value is not found
-
-   public int lastIndexOf(E value);
-   // pre: value is not null
-   // post: returns (0-origin) index of value,
-   // or -1 if value is not found
-
-   public E get(int i);
-   // pre: 0 <= i < size()
-   // post: returns object found at that location
-
-   public E set(int i, E o);
-   // pre: 0 <= i < size()
-   // post: sets ith entry of list to value o;
-   // returns old value
-
-   public void add(int i, E o);
-   // pre: 0 <= i <= size()
-   // post: adds ith entry of list to value o
-
-   public E remove(int i);
-   // pre: 0 <= i < size()
-   // post: removes and returns object found at that location
-
-   public Iterator<E> iterator();
-   // post: returns an iterator allowing
-   // ordered traversal of elements in list
+    /**
+     * Pre:
+     * Post: returns number of elements in list
+     */ 
+    public int size();
+   
+    /**
+     * Pre:
+     * Post: returns true iff list has no elements
+     */
+    public boolean isEmpty();
+   
+    /** 
+     * Pre:
+     * Post: value is added to beginning of list
+     */ 
+    public void addFirst(E value);
+   
+    /**
+     * Pre:
+     * Post: value is added to end of list
+     */ 
+    public void addLast(E value);
+   
+    /**
+     * Pre: list is not empty
+     * Post: returns first value in list
+     */ 
+    public E getFirst();
+   
+    /**
+     * Pre: list is not empty
+     * Post: returns last value in list
+     */ 
+    public E getLast();
+   
+    /**
+     * Pre: list is not empty
+     * Post: removes first value from list
+     */ 
+    public E removeFirst();
+   
+    /**
+     * Pre: list is not empty
+     * Post: removes last value from list
+     */ 
+    public E removeLast();
+   
+    /**
+     * Pre:
+     * Post: value is added to tail of list
+     */ 
+    public void add(E value);
+   
+    /**
+     * Pre: list has at least one element
+     * Post: removes last value found in list
+     */ 
+    public E remove();
+   
+    /** 
+     * Pre: list has at least one element
+     * Post: returns last value found in list
+     */ 
+    public E get();
+   
+    /**
+     * Pre: 0 <= i < size()
+     * Post: returns object found at that location
+     */ 
+    public E get(int i);
+   
+    /**
+     * Pre: 0 <= i <= size()
+     * Post: adds ith entry of list to value o
+     */ 
+    public void add(int i, E o);
+   
+    /** 
+     * Pre: 0 <= i < size()
+     * Post: removes and returns object found at that location
+     */ 
+    public E remove(int i);
 }
+
