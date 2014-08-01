@@ -1,9 +1,43 @@
 /**
+<<<<<<< HEAD
+ * @author Miguel Zea
+ * @author Diego Bran
+ * @author Derek Orbaugh
+ * @author Eduardo Drummond
+ * @author Javier Gracía
+ * | -------------------------------------------------- |
+ * |        Universidad Del Valle De Guatemala          |
+ * | -------------------------------------------------- |
+ * | Algoritmos y Estructuras de Datos.                 |
+ * | Sección 20.                                        |
+ * | Hoja de Trabajo #4.                                |
+ * | 14/08/2012.                                        |
+ * | Descripción: implementación de una calculadora     |
+ * | que evalúe expresiones en fortmato postfix,        |
+ * | aplicando stacks representados con vectores, array |
+ * | lists y listas (simples, dobles y circulares) y    |
+ * | empleando los patrones de diseño factory (para la  |
+ * | selección de la lista y el stack a implementar) y  |
+ * | singleton (para la calculadora).                   |
+ * | -------------------------------------------------- |
+ */
+
+/**
+=======
+>>>>>>> origin/master
  * Clase que describe la implementación del ADT pila (Stack) mediante el uso del 
  * objeto Vector y sus respectivos métodos. Tomado del capítulo 10 del libro 
  * Java Structures de Duane A. Bailey.
  */
+<<<<<<< HEAD
 public class StackList<E> extends abstractList<E>  {
+=======
+<<<<<<< HEAD
+public class StackList<E>{
+=======
+public class StackList<E>  {
+>>>>>>> origin/master
+>>>>>>> origin/master
     protected list<E> data;                        
     
     /**
@@ -31,7 +65,10 @@ public class StackList<E> extends abstractList<E>  {
      * Post: se añade un elemento a la pila mediante el método add del
      * objeto Vector.
      */
+<<<<<<< HEAD
+=======
     
+>>>>>>> origin/master
     public void push(E element) {
         data.addFirst(element);
     }
