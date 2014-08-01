@@ -1,4 +1,5 @@
 /**
+<<<<<<< HEAD
  * @author Miguel Zea
  * @author Diego Bran
  * @author Derek Orbaugh
@@ -22,11 +23,17 @@
  */
 
 /**
+=======
+>>>>>>> origin/master
  * Clase que describe la implementación del ADT pila (Stack) mediante el uso del 
  * objeto Vector y sus respectivos métodos. Tomado del capítulo 10 del libro 
  * Java Structures de Duane A. Bailey.
  */
+<<<<<<< HEAD
 public class StackList<E>{
+=======
+public class StackList<E>  {
+>>>>>>> origin/master
     protected list<E> data;                        
     
     /**
@@ -54,6 +61,10 @@ public class StackList<E>{
      * Post: se añade un elemento a la pila mediante el método add del
      * objeto Vector.
      */
+<<<<<<< HEAD
+=======
+    
+>>>>>>> origin/master
     public void push(E element) {
         data.addFirst(element);
     }
@@ -65,12 +76,13 @@ public class StackList<E>{
      * del método remove) y se retorna. En caso que la pila esté vacía,
      * se lanza la excepción correspondiente.
      */
-    @Override
+   
     public E pop() {
         if (! empty()) {
             return(data.removeFirst());
-        } else {
-            throw new EmptyStackException(); 
+        } 
+        else {
+           
         }
     }
     
@@ -81,12 +93,15 @@ public class StackList<E>{
      * del método remove). En caso que la pila esté vacía, se lanza la 
      * excepción correspondiente.
      */
-    @Override
+    
     public E peek() {
-        if (! empty()) {
+        if (! empty())
+        {
             return data.getFirst();
-        } else {
-            throw new EmptyStackException();
+        } 
+        else
+        {
+            
         }
         
     }
@@ -96,7 +111,7 @@ public class StackList<E>{
      * Post: retorna el número de elementos contenidos en el Vector 
      * (evaluado mediante el método size del objeto Vector).
      */
-    @Override
+    /*@Override*/
     public int size() {
         return data.size();
     }
