@@ -1,32 +1,8 @@
 /**
- * @author Miguel Zea
- * @author Diego Bran
- * @author Derek Orbaugh
- * @author Eduardo Drummond
- * @author Javier Gracía
- * | -------------------------------------------------- |
- * |        Universidad Del Valle De Guatemala          |
- * | -------------------------------------------------- |
- * | Algoritmos y Estructuras de Datos.                 |
- * | Sección 20.                                        |
- * | Hoja de Trabajo #4.                                |
- * | 14/08/2012.                                        |
- * | Descripción: implementación de una calculadora     |
- * | que evalúe expresiones en fortmato postfix,        |
- * | aplicando stacks representados con vectores, array |
- * | lists y listas (simples, dobles y circulares) y    |
- * | empleando los patrones de diseño factory (para la  |
- * | selección de la lista y el stack a implementar) y  |
- * | singleton (para la calculadora).                   |
- * | -------------------------------------------------- |
- */
-package postfixcalculator;
-
-/**
  * Interfaz que presenta una descripción básica de la estructura Lista. Tomado 
  * del capítulo 10 del libro Java Structures de Duane A. Bailey.
  */
-public interface List<E> {
+public interface list<E> {
 
     /**
      * Pre:

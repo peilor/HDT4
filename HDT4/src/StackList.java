@@ -3,7 +3,7 @@
  * objeto Vector y sus respectivos métodos. Tomado del capítulo 10 del libro 
  * Java Structures de Duane A. Bailey.
  */
-public class StackList<E>  {
+public class StackList<E> extends abstractList<E>  {
     protected list<E> data;                        
     
     /**
@@ -45,12 +45,13 @@ public class StackList<E>  {
      */
    
     public E pop() {
-        if (! empty()) {
+        if(!isEmpty()) {
             return(data.removeFirst());
         } 
         else {
            
         }
+        return null;
     }
     
     /**

@@ -21,14 +21,13 @@
  * | -------------------------------------------------- |
  */
 
-package postfixcalculator;
 
 /**
  * Implementación de una lista circularmente encadenada, mediante el uso de la
  * clase nodo (Node). Tomado del capítulo 9 del libro Java Structures 
  * de Duane A. Bailey. NO fueron implementados todos sus métodos.
  */
-public class CircularList<E> extends AbstractList<E> {
+public class CircularList<E> extends abstractList<E> {
     protected Node<E> tail; 
     protected int count;
     
@@ -41,7 +40,7 @@ public class CircularList<E> extends AbstractList<E> {
         count = 0;
     }
     
-    @Override
+    
     /**
      * Pre: ninguna.
      * Post: regresa el número de elementos en la lista.
@@ -51,7 +50,7 @@ public class CircularList<E> extends AbstractList<E> {
     }
 
     
-    @Override
+    
     /**
      * Pre: el valor a agregar no es nulo.
      * Post: el elemento es agregado a la cabeza de la lista.
@@ -68,7 +67,7 @@ public class CircularList<E> extends AbstractList<E> {
         count++;
     }
     
-    @Override
+    
     /**
      * Pre: ninguna.
      * Post: el elemento es agregado a la cola de la lista.
@@ -78,8 +77,7 @@ public class CircularList<E> extends AbstractList<E> {
         tail = tail.next();
     }
     
-    @Override
-    /**
+        /**
      * Pre: 0<= i <= size().
      * Post: agrega el elemento o en la i-ésima posición de la lista.
      */
@@ -105,7 +103,7 @@ public class CircularList<E> extends AbstractList<E> {
         }
     }
     
-    @Override
+    
     /**
      * Pre: 0<= i <= size().
      * Post: regresa y remueve de la lista el elemento encontrado en el índice
@@ -131,7 +129,7 @@ public class CircularList<E> extends AbstractList<E> {
         }
     }
     
-    @Override
+    
     /**
      * Pre: 0<= i <= size().
      * Post: regresa el elemento encontrado en el índice especificado.

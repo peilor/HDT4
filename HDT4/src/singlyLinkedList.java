@@ -1,34 +1,9 @@
 /**
- * @author Miguel Zea
- * @author Diego Bran
- * @author Derek Orbaugh
- * @author Eduardo Drummond
- * @author Javier Gracía
- * | -------------------------------------------------- |
- * |        Universidad Del Valle De Guatemala          |
- * | -------------------------------------------------- |
- * | Algoritmos y Estructuras de Datos.                 |
- * | Sección 20.                                        |
- * | Hoja de Trabajo #4.                                |
- * | 14/08/2012.                                        |
- * | Descripción: implementación de una calculadora     |
- * | que evalúe expresiones en fortmato postfix,        |
- * | aplicando stacks representados con vectores, array |
- * | lists y listas (simples, dobles y circulares) y    |
- * | empleando los patrones de diseño factory (para la  |
- * | selección de la lista y el stack a implementar) y  |
- * | singleton (para la calculadora).                   |
- * | -------------------------------------------------- |
- */
-
-package postfixcalculator;
-
-/**
  * Implementación de una lista simplemente encadenada, mediante el uso de la
  * clase nodo (Node). Tomado del capítulo 9 del libro Java Structures 
  * de Duane A. Bailey. NO fueron implementados todos sus métodos.
  */
-public class SinglyLinkedList<E> extends AbstractList<E> {
+public class singlyLinkedList<E> extends abstractList<E> {
 
     protected int count; // Tamaño de la lista.
     protected Node<E> head; // Referencia al primer elemento.
@@ -37,21 +12,22 @@ public class SinglyLinkedList<E> extends AbstractList<E> {
      * Pre: ninguna.
      * Post: genera una lista simplemente encadenada vacía.
      */
-    public SinglyLinkedList() {
+    public singlyLinkedList() {
         head = null;
         count = 0;
     }
     
-    @Override
+    /*@Override*/
     /**
      * Pre: ninguna.
      * Post: regresa el número de elementos en la lista.
      */
-    public int size() {
+    public int size() 
+    {
         return count;
     }
     
-    @Override
+    /*@Override*/
     /**
      * Pre: ninguna.
      * Post: el elemento o es agregado al inicio de la lista.
@@ -61,7 +37,7 @@ public class SinglyLinkedList<E> extends AbstractList<E> {
         count++;
     }
     
-    @Override
+    
     /**
      * Pre: ninguna.
      * Post: el elemento o es agregado al final de la lista.
