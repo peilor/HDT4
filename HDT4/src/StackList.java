@@ -21,16 +21,13 @@
  * | -------------------------------------------------- |
  */
 
-package postfixcalculator;
-import java.util.EmptyStackException;
-
 /**
  * Clase que describe la implementación del ADT pila (Stack) mediante el uso del 
  * objeto Vector y sus respectivos métodos. Tomado del capítulo 10 del libro 
  * Java Structures de Duane A. Bailey.
  */
-public class StackList<E> extends AbstractStack<E> {
-    protected List<E> data;                        
+public class StackList<E>{
+    protected list<E> data;                        
     
     /**
      * Pre: ninguna.
@@ -57,7 +54,6 @@ public class StackList<E> extends AbstractStack<E> {
      * Post: se añade un elemento a la pila mediante el método add del
      * objeto Vector.
      */
-    @Override
     public void push(E element) {
         data.addFirst(element);
     }
