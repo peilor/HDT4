@@ -18,3 +18,4 @@ public abstract class AbstractList<E>
   {
 	return -1 != indexOf(value);
   }
+}
