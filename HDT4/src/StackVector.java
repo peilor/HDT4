@@ -78,7 +78,7 @@ public class StackVector<E>  implements Stack<E>{
          * @return si la pila está vacía o no
 		 * post: retorna true si la pila está vacía y false si tiene algo
          */
-	public boolean empty()
+	public boolean isEmpty()
 	{
 		return cont == 0;
 	}

@@ -21,8 +21,6 @@
  * | -------------------------------------------------- |
  */
 
-package postfixcalculator;
-
 /**
  * Clase que describe los objetos de tipo nodo (Node), necesarios para la definición de 
  * listas enlazadas. Tomado del capítulo 9 del libro Java Structures de Duane A. Bailey.

@@ -13,12 +13,12 @@ public class ListFactory<E> {
      * Post: regresa una instancia de la estructura lista, con la implementación 
      * correspondiente al parámetro.
      */
-    public list<E> getList(String parList) {
-        if (parList == "SL") {
+    public list<E> getList(int parList) {
+        if (parList == 3) {
             return new singlyLinkedList<E>();
-        } else if (parList == "DL") {
+        } else if (parList == 4) {
             return new DoublyLinkedList<E>();
-        } else if (parList == "CL"){
+        } else if (parList == 5){
             return new CircularList<E>();
         } else {
             return null;

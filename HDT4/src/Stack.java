@@ -38,7 +38,7 @@ public interface Stack <E>{
     * 
     * @return si está vacía o no
     */
-   public boolean empty();
+   public boolean isEmpty();
    // post: retorna true si la pila está vacía y false si tiene algo
    
    /**

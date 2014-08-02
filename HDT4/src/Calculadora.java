@@ -16,7 +16,7 @@ import javax.swing.JOptionPane;
  * Clase que usa la pila para hacer una calculadora
  */
 public class Calculadora {
-    private static Stack<Integer> datos;
+    private static int tipo;
     /**
      * @param args the command line arguments
      */
@@ -28,27 +28,28 @@ public class Calculadora {
                 + "\n2)Vector"
                 + "\n3)Lista: Simplemente Encadenada"
                 + "\n4)Lista: Doblemente Encadenada"
-                + "\n5)Lista: Circular"
-                + "\n6)Salir"));
+                + "\n5)Lista: Circular"));
         if(op==1){
-            
+            tipo=1;
+            cont=false;
         }else if(op==2){
-            
+            tipo=2;
+            cont=false;
         }else if(op==3){
-            
+            tipo=3;
+            cont=false;
         }else if(op==4){
-            
+            tipo=4;
+            cont=false;
         }else if(op==5){
-            
-        }else if(op==6){
-            JOptionPane.showMessageDialog(null, "Gracias por usar el programa");
+            tipo=5;
             cont=false;
         }else{
-            JOptionPane.showMessageDialog(null, "Usted ha ingresado una opcion"
-                    + "");
+            JOptionPane.showMessageDialog(null, "Usted no ha ingresado una opcion valida");
             }
         }
-        datos= new StackVector<Integer>();
+        StackFactory<Float> sFactory = new StackFactory<Float>();
+        Stack<Float> datos = sFactory.getStack(tipo);   
         String strLinea1=" ";
         String strLinea= " ";		
         /**
@@ -68,7 +69,7 @@ public class Calculadora {
                  * Se imprime la cadena leída
                  */
 				strLinea = strLinea1;
-                System.out.println ("Operacion ingresada: "+strLinea);
+                JOptionPane.showMessageDialog(null, "Operacion ingresada: "+strLinea);
                 
             }
             // Cerramos el archivo
@@ -81,9 +82,9 @@ public class Calculadora {
             System.err.println("Ocurrio un error: " + e.getMessage());
         } 
          
-       int resultado=0;
-       int num1 = 0;
-       int num2 = 0;   
+       float resultado=0;
+       float num1 = 0;
+       float num2 = 0;   
 	   /**
         * Se crea el ciclo para la clasificación y operaciónes de la cadena ingresada
         */
@@ -129,13 +130,13 @@ public class Calculadora {
                 */
                 if (Character.getNumericValue(strLinea.charAt(i))>=0)
                 {
-				   int dato=Character.getNumericValue(strLinea.charAt(i));
+				   float dato=Character.getNumericValue(strLinea.charAt(i));
                    datos.push(dato);
                 }      
         }
 	   /**
        * imprime el resultado en pantalla
        */
-       System.out.println ("El resultado de las operaciones es: "+datos.pop()); 
+       JOptionPane.showMessageDialog(null, "El resultado del calculo es: "+datos.pop()); 
     }
 }

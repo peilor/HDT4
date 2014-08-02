@@ -38,7 +38,7 @@ public class StackArrayList<E>
 		return data.size();
 	}
   
-	public boolean empty()
+	public boolean isEmpty()
 	// post: returns true if and only if the stack is empty
 	{
 		return size() == 0;

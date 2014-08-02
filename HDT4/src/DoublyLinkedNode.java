@@ -21,8 +21,6 @@
  * | -------------------------------------------------- |
  */
 
-package postfixcalculator;
-
 /**
  * Clase que describe los objetos de tipo nodo doble, necesarios para la definición 
  * de listas doblemente enlazadas. Tomado del capítulo 9 del libro Java Structures 

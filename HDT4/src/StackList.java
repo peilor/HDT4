@@ -1,5 +1,4 @@
 /**
-<<<<<<< HEAD
  * @author Miguel Zea
  * @author Diego Bran
  * @author Derek Orbaugh
@@ -23,21 +22,12 @@
  */
 
 /**
-=======
->>>>>>> origin/master
  * Clase que describe la implementación del ADT pila (Stack) mediante el uso del 
  * objeto Vector y sus respectivos métodos. Tomado del capítulo 10 del libro 
  * Java Structures de Duane A. Bailey.
  */
-<<<<<<< HEAD
-public class StackList<E> extends abstractList<E>  {
-=======
-<<<<<<< HEAD
-public class StackList<E>{
-=======
-public class StackList<E>  {
->>>>>>> origin/master
->>>>>>> origin/master
+
+public class StackList<E> implements Stack<E>{
     protected list<E> data;                        
     
     /**
@@ -45,79 +35,60 @@ public class StackList<E>  {
      * Post: instancia un objeto pila (StackVector), cuyos datos se
      * almacenen en un objeto Vector.
      */
-    public StackList(String par) {
+    public StackList(int par) {
         ListFactory<E> temp = new ListFactory<E>();
         data = temp.getList(par);
     }
     
     /**
      * Pre: ninguna.
-     * Post: instancia un objeto pila (StackVector), cuyos datos se
-     * almacenen en un objeto Vector.
-     */
-    public StackList() {
-        ListFactory<E> temp = new ListFactory<E>();
-        data = temp.getList("CL");
-    }
-    
-    /**
-     * Pre: ninguna.
-     * Post: se añade un elemento a la pila mediante el método add del
+     * Post: se aÃ±ade un elemento a la pila mediante el mÃ©todo add del
      * objeto Vector.
      */
-<<<<<<< HEAD
-=======
-    
->>>>>>> origin/master
-    public void push(E element) {
-        data.addFirst(element);
+    public void push(E item){
+        data.addFirst(item);
     }
     
     /**
-     * Pre: la pila no está vacía (se evalúa dentro del mismo, empleando
-     * el método empty).
-     * Post: se remueve el último elemento agregado al Vector (por medio
-     * del método remove) y se retorna. En caso que la pila esté vacía,
-     * se lanza la excepción correspondiente.
+     * Pre: la pila no estÃ¡ vacÃ­a (se evalÃºa dentro del mismo, empleando
+     * el mÃ©todo empty).
+     * Post: se remueve el Ãºltimo elemento agregado al Vector (por medio
+     * del mÃ©todo remove) y se retorna. En caso que la pila estÃ© vacÃ­a,
+     * se lanza la excepciÃ³n correspondiente.
      */
-   
     public E pop() {
-        if(!isEmpty()) {
+        if (!isEmpty()) {
             return(data.removeFirst());
-        } 
-        else {
-           
+        } else {
+            return null; 
         }
-        return null;
     }
     
     /**
-     * Pre: la pila no está vacía (se evalúa dentro del mismo, empleando
-     * el método empty).
-     * Post: se retorna el último elemento agregado al Vector (por medio
-     * del método remove). En caso que la pila esté vacía, se lanza la 
-     * excepción correspondiente.
+     * Pre: la pila no estÃ¡ vacÃ­a (se evalÃºa dentro del mismo, empleando
+     * el mÃ©todo empty).
+     * Post: se retorna el Ãºltimo elemento agregado al Vector (por medio
+     * del mÃ©todo remove). En caso que la pila estÃ© vacÃ­a, se lanza la 
+     * excepciÃ³n correspondiente.
      */
-    
     public E peek() {
-        if (! empty())
-        {
+        if (! isEmpty()) {
             return data.getFirst();
-        } 
-        else
-        {
-            
+        } else {
+            return null;
         }
         
     }
         
     /**
      * Pre: ninguna.
-     * Post: retorna el número de elementos contenidos en el Vector 
-     * (evaluado mediante el método size del objeto Vector).
+     * Post: retorna el nÃºmero de elementos contenidos en el Vector 
+     * (evaluado mediante el mÃ©todo size del objeto Vector).
      */
-    /*@Override*/
     public int size() {
         return data.size();
+    }
+    public boolean isEmpty() {
+        return size() == 0;
     }
 }

@@ -4,26 +4,7 @@
  */
 public class StackFactory<E> {
     
-    /**
-     * Pre: el parámetro debe ser cualquiera de los siguientes:
-     * "AL" -> ArrayList
-     * "VC" -> Vector
-     * "LL" -> List
-     * Post: regresa una instancia del ADT Stack, con la implementación 
-     * correspondiente al parámetro.
-     */
-    public Stack<E> getStack(String tipoStack) {
-        if (tipoStack == "AL") {
-            return new StackArrayList<E>();
-        } else if (tipoStack == "VC") {
-            return new StackVector<E>();
-        } else if (tipoStack == "LL"){
-            return new StackList<E>();
-        } else {
-            return null;
-        }
-    }
-    
+  
     /**
      * Pre: el parámetro debe ser cualquiera de los siguientes:
      * "AL" -> ArrayList
@@ -33,13 +14,13 @@ public class StackFactory<E> {
      * correspondiente al parámetro, permite seleccionar la implementación para
      * la estructura StackList.
      */
-    public Stack<E> getStack(String tipoStack, String tipoList) {
-        if (tipoStack == "AL") {
+    public Stack<E> getStack(int tipoStack) {
+        if (tipoStack == 1) {
             return new StackArrayList<E>();
-        } else if (tipoStack == "VC") {
+        } else if (tipoStack == 2) {
             return new StackVector<E>();
-        } else if (tipoStack == "LL"){
-            return new StackList<E>(parList);
+        } else if (tipoStack == 3){
+            return new StackList<E>(tipoStack);
         } else {
             return null;
         }
