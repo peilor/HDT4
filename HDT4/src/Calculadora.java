@@ -16,6 +16,7 @@ import javax.swing.JOptionPane;
  */
 public class Calculadora {
     private static int tipo;
+    private static boolean bandera = false;
     /**
      * @param args the command line arguments
      */
@@ -144,6 +145,15 @@ public class Calculadora {
        */
        JOptionPane.showMessageDialog(null, "El resultado del calculo es: "+datos.pop()); 
     }
-    
-    
+    /**
+     * Método para usar el singletonException, crea una nueva instancia de Calculadora
+     */
+    public Calculadora() throws singletonException {
+        if (bandera) {
+            throw new singletonException("Se debe utilizar una expresion Postfix");
+        } else {
+            bandera = true;
+        }
+        
+    }    
 }
