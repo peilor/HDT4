@@ -1,3 +1,11 @@
+/**
+*Universidad del Valle de Guatemala
+* @author Pablo Argueta, Carnet: 13028
+* @author Alejandro Diaz, Carnet: 13082
+* Esta clase esta basada de los ejemplos subidos en Black Board
+*/
+
+
 public abstract class abstractList<E> implements list<E> {
    
     /**

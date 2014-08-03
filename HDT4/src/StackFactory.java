@@ -1,20 +1,21 @@
 /**
- * Clase que emplea el factor de diseño Factory para seleccionar la implementación
- * a utilizar para el ADT Stack.
+ *	Universidad del Valle de Guatemala
+ * @author Pablo Argueta, Carnet: 13028
+ * @author Alejandro Diaz, Carnet: 13082
+ * Clase basada en los ejemplos subidos en clase
+ * Emplea el Factory que le permite selccionar que implementacion utilizara
  */
+
 public class StackFactory<E> {
     
   
     /**
-     * Pre: el parámetro debe ser cualquiera de los siguientes:
-     * "AL" -> ArrayList
-     * "VC" -> Vector
-     * "LL" -> List
-     * Post: regresa una instancia del ADT Stack, con la implementación 
-     * correspondiente al parámetro, permite seleccionar la implementación para
-     * la estructura StackList.
+     * Pre: Recibe como parametro  1,2 o 3
+     * Post: regresa una instancia con un Stack distinto dependiendo de 
+	 * la seleccion del usuario 
      */
-    public Stack<E> getStack(int tipoStack) {
+    public Stack<E> getStack(int tipoStack)
+	{
         if (tipoStack == 1) {
             return new StackArrayList<E>();
         } else if (tipoStack == 2) {
@@ -26,11 +27,7 @@ public class StackFactory<E> {
         }
     }
     
-    /**
-     * Pre: ninguna.
-     * Post: regresa una instancia del ADT Stack, implementado con la estructura
-     * por defecto ArrayList.
-     */
+    
     public Stack<E> getStack() {
         return new StackArrayList<E>();
     }

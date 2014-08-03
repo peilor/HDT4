@@ -1,9 +1,8 @@
 /**
- *
+ *	Universidad del Valle de Guatemala
  * @author Pablo Argueta, Carnet: 13028
- * @author Aarón Girón, Carnet: 13042
- * @author Esteban Barrera, Carnet: 13413
- * 
+ * @author Alejandro Diaz, Carnet: 13082
+ * Clase para realizar las operaciones utilizando un Vector
  */
 
 import java.util.*;

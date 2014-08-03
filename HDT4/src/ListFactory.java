@@ -1,17 +1,16 @@
-
 /**
- * Clase que emplea el factor de diseño Factory para seleccionar la implementación
- * a utilizar para la estructura lista encadenada.
+ *	Universidad del Valle de Guatemala
+ * @author Pablo Argueta, Carnet: 13028
+ * @author Alejandro Diaz, Carnet: 13082
+ * Clase basada en los ejemplos subidos en clase
+ * Emplea el Factory que le permite selccionar que implementacion utilizara
  */
 public class ListFactory<E> {
     
-    /**
-     * Pre: el parámetro debe ser cualquiera de los siguientes:
-     * "SL" -> SinglyLinkedList
-     * "DL" -> DoublyLinkedList
-     * "CL" -> CircularList
-     * Post: regresa una instancia de la estructura lista, con la implementación 
-     * correspondiente al parámetro.
+     /**
+     * Pre: Recibe como parametro  3,4 o 5 
+     * Post: regresa una instancia con una lista  distinta dependiendo de 
+	 * la seleccion del usuario 
      */
     public list<E> getList(int parList) {
         if (parList == 3) {
@@ -25,11 +24,7 @@ public class ListFactory<E> {
         }
     }
     
-    /**
-     * Pre: ninguna.
-     * Post: regresa una instancia de la estructura lista, implementado con la 
-     * estructura por defecto CircularList.
-     */
+   
     public list<E> getList() {
         return new DoublyLinkedList<E>();
     }

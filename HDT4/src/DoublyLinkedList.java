@@ -1,8 +1,9 @@
-
 /**
- * Implementación de una lista doblemente encadenada, mediante el uso de la
- * clase nodo doble. Tomado del capítulo 9 del libro Java Structures 
- * de Duane A. Bailey. NO fueron implementados todos sus métodos.
+ *	Universidad del Valle de Guatemala
+ * @author Pablo Argueta, Carnet: 13028
+ * @author Alejandro Diaz, Carnet: 13082
+ * Clase para una lista doblemente enlazada 
+ * Tomada del capitulo 9.5 del libro Java Structures
  */
 public class DoublyLinkedList<E> extends abstractList<E> {
 

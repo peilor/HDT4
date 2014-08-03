@@ -4,8 +4,7 @@ import javax.swing.JOptionPane;
 /**
  *
  * @author Pablo Argueta, Carnet: 13028
- * @author Aarón Girón, Carnet: 13042
- * @author Esteban Barrera, Carnet: 13413
+ * @author Alejandro Diaz, Carnet: 13082
  * 
  * El código para la lectura del archivo de texto fue tomado de la página: http://codigosparadesarrolladores.blogspot.com/2014/06/codigo-java-leer-archivos-de-texto.html
  * 
@@ -13,7 +12,7 @@ import javax.swing.JOptionPane;
 
 /**
  * 
- * Clase que usa la pila para hacer una calculadora
+ * Clase que usa distintas implementaciones para poder hacer una calculadora
  */
 public class Calculadora {
     private static int tipo;
@@ -139,4 +138,6 @@ public class Calculadora {
        */
        JOptionPane.showMessageDialog(null, "El resultado del calculo es: "+datos.pop()); 
     }
+    
+    
 }

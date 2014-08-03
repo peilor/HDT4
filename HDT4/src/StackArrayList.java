@@ -1,7 +1,14 @@
+/**
+ *	Universidad del Valle de Guatemala
+ * @author Pablo Argueta, Carnet: 13028
+ * @author Alejandro Diaz, Carnet: 13082
+ * Clase basada en los ejemplos subidos en clase.
+ */
+
+
 import java.util.ArrayList;
 
-public class StackArrayList<E>
- implements Stack<E>
+public class StackArrayList<E> implements Stack<E>
 {
 	protected ArrayList<E> data;
 

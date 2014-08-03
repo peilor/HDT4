@@ -1,41 +1,16 @@
 /**
- * @author Miguel Zea
- * @author Diego Bran
- * @author Derek Orbaugh
- * @author Eduardo Drummond
- * @author Javier Gracía
- * | -------------------------------------------------- |
- * |        Universidad Del Valle De Guatemala          |
- * | -------------------------------------------------- |
- * | Algoritmos y Estructuras de Datos.                 |
- * | Sección 20.                                        |
- * | Hoja de Trabajo #4.                                |
- * | 14/08/2012.                                        |
- * | Descripción: implementación de una calculadora     |
- * | que evalúe expresiones en fortmato postfix,        |
- * | aplicando stacks representados con vectores, array |
- * | lists y listas (simples, dobles y circulares) y    |
- * | empleando los patrones de diseño factory (para la  |
- * | selección de la lista y el stack a implementar) y  |
- * | singleton (para la calculadora).                   |
- * | -------------------------------------------------- |
- */
-
-/**
- * Clase que describe los objetos de tipo nodo doble, necesarios para la definición 
- * de listas doblemente enlazadas. Tomado del capítulo 9 del libro Java Structures 
- * de Duane A. Bailey.
+ *	Universidad del Valle de Guatemala
+ * @author Pablo Argueta, Carnet: 13028
+ * @author Alejandro Diaz, Carnet: 13082
+ * Clase Nodo que se utiliza para las listas 
+ * Basado en el capitulo 9.5 de java structures. 
  */
 public class DoublyLinkedNode<E> {
     protected E data;
     protected DoublyLinkedNode<E> nextElement;
     protected DoublyLinkedNode<E> previousElement;
     
-    /** 
-     * Pre: v es un dato, next es una referencia al segmento posterior de la lista,
-     * previous es una referencia al segmento anterior de la lista.
-     * Post: se construye un elemento que pasa a hacer la nueva cabeza de la lista.
-     */
+   
     public DoublyLinkedNode(E v, DoublyLinkedNode<E> next, DoublyLinkedNode<E> previous) {
         data = v;
         nextElement = next;

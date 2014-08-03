@@ -1,6 +1,8 @@
 /**
- * Interfaz que presenta una descripción básica de la estructura Lista. Tomado 
- * del capítulo 10 del libro Java Structures de Duane A. Bailey.
+ *	Universidad del Valle de Guatemala
+ * @author Pablo Argueta, Carnet: 13028
+ * @author Alejandro Diaz, Carnet: 13082
+ * Interfaz lista basada de los ejemplos subidos en clase.  
  */
 public interface list<E> {
 

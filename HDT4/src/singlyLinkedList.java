@@ -1,31 +1,26 @@
 /**
- * Implementación de una lista simplemente encadenada, mediante el uso de la
- * clase nodo (Node). Tomado del capítulo 9 del libro Java Structures 
- * de Duane A. Bailey. NO fueron implementados todos sus métodos.
+ *	Universidad del Valle de Guatemala
+ * @author Pablo Argueta, Carnet: 13028
+ * @author Alejandro Diaz, Carnet: 13082
+ * Clase de una lista simplemente encadenada que utiliza
+ * Basado del capitulo 9 seccion 4 del libro de Java Structures.
  */
 public class singlyLinkedList<E> extends abstractList<E> {
 
-    protected int count; // Tamaño de la lista.
-    protected Node<E> head; // Referencia al primer elemento.
+	protected int count; // list size
+	protected Node<E> head; // ref. to first element
+	public singlyLinkedList()
+	// post: generates an empty list
+	{		
+		head = null;
+		count = 0;
+	}
     
-    /**
-     * Pre: ninguna.
-     * Post: genera una lista simplemente encadenada vacía.
-     */
-    public singlyLinkedList() {
-        head = null;
-        count = 0;
-    }
-    
-    /*@Override*/
-    /**
-     * Pre: ninguna.
-     * Post: regresa el número de elementos en la lista.
-     */
-    public int size() 
-    {
-        return count;
-    }
+    public int size()
+// post: returns number of elements in list
+	{
+		return count;
+	}
     
     /*@Override*/
     /**
@@ -138,10 +133,10 @@ public class singlyLinkedList<E> extends abstractList<E> {
                 finger = finger.next();
                 i--;
             }
-            // Se encadenan los elementos previo y siguiente al elemento a remover.
+           
             previous.setNext(finger.next());
             count--;
-            // Se retorna el valor del elemento removido.
+           
             return finger.value();
         } else {
             throw new IndexOutOfBoundsException();
@@ -156,12 +151,12 @@ public class singlyLinkedList<E> extends abstractList<E> {
     public E get(int i) {
         if ((i >= 0) && (i < size()) && !isEmpty()) {
             Node<E> finger = head;
-            // Se búsca al valor indexado.
+          
             while (i > 0) {
                 finger = finger.next();
                 i--;
             }
-            // Se retorna el valor del elemento encontrado.
+           
             return finger.value();
         } else {
             throw new IndexOutOfBoundsException();
