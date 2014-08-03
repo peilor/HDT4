@@ -7,9 +7,11 @@
 
 
 import java.util.ArrayList;
-
-public class StackArrayList<E> implements Stack<E>
-{
+/**
+ * Clase que extiende a la clase abstracta abstractStack
+ * @param <E>, que define el tipo de datos que recibe la pila
+ */
+public class StackArrayList<E> extends abstractStack<E>{
 	protected ArrayList<E> data;
 
 	public StackArrayList()
@@ -43,11 +45,5 @@ public class StackArrayList<E> implements Stack<E>
 	// post: returns the number of elements in the stack
 	{
 		return data.size();
-	}
-  
-	public boolean isEmpty()
-	// post: returns true if and only if the stack is empty
-	{
-		return size() == 0;
 	}
 }

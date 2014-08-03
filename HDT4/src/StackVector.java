@@ -7,10 +7,10 @@
 
 import java.util.*;
 /**
- * Clase que implementa la intefaz Stack
+ * Clase que extiende a la clase abstracta abstractStack
  * @param <E>, que define el tipo de datos que recibe la pila
  */
-public class StackVector<E>  implements Stack<E>{
+public class StackVector<E>  extends abstractStack<E>{
 	
     protected Vector<E> vector;
     private int cont=0;
@@ -71,15 +71,4 @@ public class StackVector<E>  implements Stack<E>{
 	{
 		return cont;
 	}
-        
-        /**
-         * 
-         * @return si la pila está vacía o no
-		 * post: retorna true si la pila está vacía y false si tiene algo
-         */
-	public boolean isEmpty()
-	{
-		return cont == 0;
-	}
-    
 }

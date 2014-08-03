@@ -1,6 +1,5 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
+ * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 
@@ -13,7 +12,7 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Alejo
+ * @author Bicimotoca
  */
 public class listTest {
     
@@ -47,11 +46,11 @@ public class listTest {
         int result = instance.size();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of isEmpty method, of class list.
+     * Probando el método isEmpty
      */
     @Test
     public void testIsEmpty() {
@@ -61,11 +60,11 @@ public class listTest {
         boolean result = instance.isEmpty();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of addFirst method, of class list.
+     * Probando el método addFirst
      */
     @Test
     public void testAddFirst() {
@@ -74,11 +73,11 @@ public class listTest {
         list instance = new listImpl();
         instance.addFirst(value);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of addLast method, of class list.
+     * Probando el método addLast
      */
     @Test
     public void testAddLast() {
@@ -87,11 +86,11 @@ public class listTest {
         list instance = new listImpl();
         instance.addLast(value);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getFirst method, of class list.
+     * Probando el método getFirst
      */
     @Test
     public void testGetFirst() {
@@ -101,11 +100,11 @@ public class listTest {
         Object result = instance.getFirst();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of getLast method, of class list.
+     * Probando el método getLast
      */
     @Test
     public void testGetLast() {
@@ -115,11 +114,11 @@ public class listTest {
         Object result = instance.getLast();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of removeFirst method, of class list.
+     * Probando el método removeFirst
      */
     @Test
     public void testRemoveFirst() {
@@ -129,11 +128,11 @@ public class listTest {
         Object result = instance.removeFirst();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of removeLast method, of class list.
+     * removeLast
      */
     @Test
     public void testRemoveLast() {
@@ -143,11 +142,11 @@ public class listTest {
         Object result = instance.removeLast();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of add method, of class list.
+     * Probando el método add
      */
     @Test
     public void testAdd_GenericType() {
@@ -156,11 +155,11 @@ public class listTest {
         list instance = new listImpl();
         instance.add(value);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of remove method, of class list.
+     * Probando el método remove
      */
     @Test
     public void testRemove_0args() {
@@ -170,11 +169,11 @@ public class listTest {
         Object result = instance.remove();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of get method, of class list.
+     * Probando el método get
      */
     @Test
     public void testGet_0args() {
@@ -184,11 +183,11 @@ public class listTest {
         Object result = instance.get();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of get method, of class list.
+     * Probando el método get
      */
     @Test
     public void testGet_int() {
@@ -199,11 +198,11 @@ public class listTest {
         Object result = instance.get(i);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of add method, of class list.
+     * Probando el método add.
      */
     @Test
     public void testAdd_int_GenericType() {
@@ -213,11 +212,11 @@ public class listTest {
         list instance = new listImpl();
         instance.add(i, o);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
     /**
-     * Test of remove method, of class list.
+     * Probando el método remove
      */
     @Test
     public void testRemove_int() {
@@ -228,10 +227,10 @@ public class listTest {
         Object result = instance.remove(i);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        // fail("The test case is a prototype.");
     }
 
-    public class listImpl implements list {
+    public class listImpl<E> implements list<E> {
 
         public int size() {
             return 0;
@@ -285,5 +284,4 @@ public class listTest {
             return null;
         }
     }
-    
 }

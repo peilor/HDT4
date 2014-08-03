@@ -5,9 +5,11 @@
  * Clase para realizar las operaciones utilizando una Lista
  */
 
-
-
-public class StackList<E> implements Stack<E>{
+/**
+ * Clase que extiende a la clase abstracta abstractStack
+ * @param <E>, que define el tipo de datos que recibe la pila
+ */
+public class StackList<E> extends abstractStack<E>{
     protected list<E> data;                        
     
     /**
@@ -15,6 +17,9 @@ public class StackList<E> implements Stack<E>{
      * Post: 
      */
     public StackList(int par) {
+        /**
+        * Se llama a ListFactory donde se selecciona el tipo de list 
+        */
         ListFactory<E> temp = new ListFactory<E>();
         data = temp.getList(par);
     }
@@ -58,13 +63,5 @@ public class StackList<E> implements Stack<E>{
      */
     public int size() {
         return data.size();
-    }
-	
-	/**
-	*Pre: ninguno.
-	*Post: regreso un valor cero que indica que la pila esta vacia
-	*/
-    public boolean isEmpty() {
-        return size() == 0;
     }
 }
