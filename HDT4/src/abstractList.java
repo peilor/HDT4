@@ -2,7 +2,7 @@
 *Universidad del Valle de Guatemala
 * @author Pablo Argueta, Carnet: 13028
 * @author Alejandro Diaz, Carnet: 13082
-* Esta clase esta basada de los ejemplos subidos en Black Board
+* Esta clase esta basada de los ejemplos subidos en Black Board y códigos del libro
 */
 
 

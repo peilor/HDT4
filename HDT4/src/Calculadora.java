@@ -16,11 +16,15 @@ import javax.swing.JOptionPane;
  */
 public class Calculadora {
     private static int tipo;
+    private static boolean bandera = false;
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         boolean cont=true;
+        /**
+        * Ciclo para mostrar el menú de implementaciones de la stack
+        */
         while(cont){
         int op=Integer.parseInt(JOptionPane.showInputDialog("¿Que tipo de implementación de Stack desea?"
                 + "\n1)ArrayList"
@@ -47,6 +51,9 @@ public class Calculadora {
             JOptionPane.showMessageDialog(null, "Usted no ha ingresado una opcion valida");
             }
         }
+        /**
+        * Llamando a la StackFactory con la selección del usuario
+        */
         StackFactory<Float> sFactory = new StackFactory<Float>();
         Stack<Float> datos = sFactory.getStack(tipo);   
         String strLinea1=" ";
@@ -138,6 +145,15 @@ public class Calculadora {
        */
        JOptionPane.showMessageDialog(null, "El resultado del calculo es: "+datos.pop()); 
     }
-    
-    
+    /**
+     * Método para usar el singletonException, crea una nueva instancia de Calculadora
+     */
+    public Calculadora() throws singletonException {
+        if (bandera) {
+            throw new singletonException("Se debe utilizar una expresion Postfix");
+        } else {
+            bandera = true;
+        }
+        
+    }    
 }

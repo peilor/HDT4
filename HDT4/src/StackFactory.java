@@ -10,7 +10,7 @@ public class StackFactory<E> {
     
   
     /**
-     * Pre: Recibe como parametro  1,2 o 3
+     * Pre: Recibe como parametro  1,2,3,4 o 5 y si es 3,4 o 5 lo manda a StackList, donde se selecciona el tipo de list
      * Post: regresa una instancia con un Stack distinto dependiendo de 
 	 * la seleccion del usuario 
      */
