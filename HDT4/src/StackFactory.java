@@ -22,6 +22,10 @@ public class StackFactory<E> {
             return new StackVector<E>();
         } else if (tipoStack == 3){
             return new StackList<E>(tipoStack);
+		}  else if (tipoStack == 4){
+            return new StackList<E>(tipoStack);
+		}   else if (tipoStack == 5){
+            return new StackList<E>(tipoStack);
         } else {
             return null;
         }
