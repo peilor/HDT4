@@ -23,7 +23,7 @@ public class StackList<E> extends abstractStack<E>{
         ListFactory<E> temp = new ListFactory<E>();
         data = temp.getList(par);
     }
-    
+
     /**
      * Pre: ninguna.
      * Post: Agrega un objeto a la lista. 

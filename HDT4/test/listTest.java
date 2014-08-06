@@ -286,5 +286,60 @@ public class listTest {
             return null;
         }
     }
+
+    public class listImpl implements list {
+
+        public int size() {
+            return 0;
+        }
+
+        public boolean isEmpty() {
+            return false;
+        }
+
+        public void addFirst(E value) {
+        }
+
+        public void addLast(E value) {
+        }
+
+        public E getFirst() {
+            return null;
+        }
+
+        public E getLast() {
+            return null;
+        }
+
+        public E removeFirst() {
+            return null;
+        }
+
+        public E removeLast() {
+            return null;
+        }
+
+        public void add(E value) {
+        }
+
+        public E remove() {
+            return null;
+        }
+
+        public E get() {
+            return null;
+        }
+
+        public E get(int i) {
+            return null;
+        }
+
+        public void add(int i, E o) {
+        }
+
+        public E remove(int i) {
+            return null;
+        }
+    }
     
 }
