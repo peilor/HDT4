@@ -16,7 +16,7 @@ import org.junit.runners.Suite;
  * @author Alejo
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({singlyLinkedListTest.class, StackFactoryTest.class, singletonExceptionTest.class, StackArrayListTest.class, CircularListTest.class, StackVectorTest.class, DoublyLinkedNodeTest.class, listTest.class, ListFactoryTest.class, StackTest.class, abstractStackTest.class, abstractListTest.class, NodeTest.class, CalculadoraTest.class, StackListTest.class, DoublyLinkedListTest.class})
+@Suite.SuiteClasses({singlyLinkedListTest.class, StackFactoryTest.class, CircularListTest.class, StackArrayListTest.class, StackVectorTest.class, DoublyLinkedNodeTest.class, listTest.class, ListFactoryTest.class, StackTest.class, abstractListTest.class, NodeTest.class, CalculadoraTest.class, StackListTest.class, DoublyLinkedListTest.class})
 public class RootSuite {
 
     @BeforeClass

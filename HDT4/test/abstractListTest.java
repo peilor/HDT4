@@ -175,8 +175,5 @@ public class abstractListTest {
 
     public class abstractListImpl extends abstractList {
     }
-
-    public class abstractListImpl extends abstractList {
-    }
     
 }

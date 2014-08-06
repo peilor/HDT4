@@ -43,14 +43,11 @@ public class StackListTest {
     @Test
     public void testPush() {
         System.out.println("push");
-        StackList instance = new StackList(1);
-        instance.push("h");
-        assertTrue(instance.pop()=="h");
-        
-
-
+        Object item = null;
+        StackList instance = null;
+        instance.push(item);
         // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
+        fail("The test case is a prototype.");
     }
 
     /**
