@@ -40,7 +40,7 @@ public class StackListTest {
     public void testPush() {
         System.out.println("push");
         int item = 1;
-        StackVector<Integer> instance = new StackVector<Integer>();
+        StackList<Integer> instance = new StackList<Integer>(1);
         instance.push(item);
         System.out.println(instance.isEmpty());
         // TODO review the generated test code and remove the default call to fail.
@@ -53,7 +53,7 @@ public class StackListTest {
     @Test
     public void testPop() {
         System.out.println("pop");
-        StackVector<Integer> instance = new StackVector<Integer>();
+        StackList<Integer> instance = new StackList<Integer>(1);
         int expResult = 1;
         instance.push(expResult);
         int result = instance.pop();
@@ -67,8 +67,8 @@ public class StackListTest {
      */
     @Test
     public void testPeek() {
-        System.out.println("pop");
-        StackVector<Integer> instance = new StackVector<Integer>();
+        System.out.println("peek");
+        StackList<Integer> instance = new StackList<Integer>(1);
         int expResult = 3;
         instance.push(expResult);
         int result = instance.pop();
@@ -83,10 +83,10 @@ public class StackListTest {
     @Test
     public void testSize() {
         System.out.println("size");
-        StackVector<String> instance = new StackVector<String>();
+        StackList<Integer> instance = new StackList<Integer>(1);
         int expResult = 2;
-        instance.push("hola");
-        instance.push("adios");
+        instance.push(2);
+        instance.push(3);
         int result = instance.size();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -99,7 +99,7 @@ public class StackListTest {
     @Test
     public void testEmpty() {
         System.out.println("empty");
-        StackVector instance = new StackVector();
+        StackList<Integer> instance = new StackList<Integer>(1);
         boolean expResult = true;
         boolean result = instance.isEmpty();
         assertEquals(expResult, result);

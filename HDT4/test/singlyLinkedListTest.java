@@ -32,15 +32,13 @@ public class singlyLinkedListTest {
     @After
     public void tearDown() {
     }
-
-    /**
-     * Probando el método size 
-     */
     @Test
     public void testSize() {
-        System.out.println("size");
+        System.out.println("tamaño");
         singlyLinkedList instance = new singlyLinkedList();
-        int expResult = 0;
+        int expResult = 1;
+        int value = 1;
+        instance.addFirst(value);
         int result = instance.size();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
@@ -48,14 +46,18 @@ public class singlyLinkedListTest {
     }
 
     /**
-     *Probando el método addFirst 
+     * Probando el método addFirst
      */
     @Test
     public void testAddFirst() {
-        System.out.println("addFirst");
-        Object o = null;
+        System.out.println("añadir al principio");
+        Object value = 1;
+        int expResult = 1;
         singlyLinkedList instance = new singlyLinkedList();
-        instance.addFirst(o);
+        instance.addFirst(value);
+        int i = 0;
+        Object result = instance.remove(i);
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -65,37 +67,13 @@ public class singlyLinkedListTest {
      */
     @Test
     public void testAddLast() {
-        System.out.println("addLast");
-        Object o = null;
+        System.out.println("agregar al final");
+        int value = 1;
+        int expResult = 1;
         singlyLinkedList instance = new singlyLinkedList();
-        instance.addLast(o);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-
-    /**
-     * Probando el método removeFirst
-     */
-    @Test
-    public void testRemoveFirst() {
-        System.out.println("removeFirst");
-        singlyLinkedList instance = new singlyLinkedList();
-        Object expResult = null;
-        Object result = instance.removeFirst();
-        assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        //fail("The test case is a prototype.");
-    }
-
-    /**
-     *Probando el método removeLast
-     */
-    @Test
-    public void testRemoveLast() {
-        System.out.println("removeLast");
-        singlyLinkedList instance = new singlyLinkedList();
-        Object expResult = null;
-        Object result = instance.removeLast();
+        instance.addLast(value);
+        int i = 0;
+        Object result = instance.remove(instance.size());
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -106,11 +84,14 @@ public class singlyLinkedListTest {
      */
     @Test
     public void testAdd() {
-        System.out.println("add");
+        System.out.println("agregar");
         int i = 0;
-        Object o = null;
+        int o = 3;
         singlyLinkedList instance = new singlyLinkedList();
         instance.add(i, o);
+        int expResult = 1;
+        Object result = instance.size();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -120,11 +101,13 @@ public class singlyLinkedListTest {
      */
     @Test
     public void testRemove() {
-        System.out.println("remove");
-        int i = 0;
+        System.out.println("remover");
+        int value = 1;
+        int expResult = 1;
         singlyLinkedList instance = new singlyLinkedList();
-        Object expResult = null;
-        Object result = instance.remove(i);
+        instance.addLast(value);
+        int i = 0;
+        Object result = instance.remove(instance.size());
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -135,14 +118,15 @@ public class singlyLinkedListTest {
      */
     @Test
     public void testGet() {
-        System.out.println("get");
-        int i = 0;
+        System.out.println("obtener");
+        int value = 1;
+        int expResult = 1;
         singlyLinkedList instance = new singlyLinkedList();
-        Object expResult = null;
-        Object result = instance.get(i);
+        instance.addLast(value);
+        int i = 0;
+        Object result = instance.get(instance.size());
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-    
 }

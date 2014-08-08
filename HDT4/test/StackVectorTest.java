@@ -67,7 +67,7 @@ public class StackVectorTest {
      */
     @Test
     public void testPeek() {
-        System.out.println("pop");
+        System.out.println("peek");
         StackVector<Integer> instance = new StackVector<Integer>();
         int expResult = 3;
         instance.push(expResult);
