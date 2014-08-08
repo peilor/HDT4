@@ -38,13 +38,15 @@ public class CircularListTest {
      */
     @Test
     public void testSize() {
-        System.out.println("size");
+        System.out.println("tamaño");
         CircularList instance = new CircularList();
-        int expResult = 0;
+        int expResult = 1;
+        int value = 1;
+        instance.addFirst(value);
         int result = instance.size();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
@@ -52,10 +54,14 @@ public class CircularListTest {
      */
     @Test
     public void testAddFirst() {
-        System.out.println("addFirst");
-        Object value = null;
+        System.out.println("añadir al principio");
+        Object value = 1;
+        int expResult = 1;
         CircularList instance = new CircularList();
         instance.addFirst(value);
+        int i = 0;
+        Object result = instance.remove(i);
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -65,10 +71,14 @@ public class CircularListTest {
      */
     @Test
     public void testAddLast() {
-        System.out.println("addLast");
-        Object value = null;
+        System.out.println("agregar al final");
+        int value = 1;
+        int expResult = 1;
         CircularList instance = new CircularList();
         instance.addLast(value);
+        int i = 0;
+        Object result = instance.remove(instance.size());
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -78,11 +88,14 @@ public class CircularListTest {
      */
     @Test
     public void testAdd() {
-        System.out.println("add");
+        System.out.println("agregar");
         int i = 0;
-        Object o = null;
+        int o = 3;
         CircularList instance = new CircularList();
         instance.add(i, o);
+        int expResult = 1;
+        Object result = instance.size();
+        assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
@@ -92,11 +105,13 @@ public class CircularListTest {
      */
     @Test
     public void testRemove() {
-        System.out.println("remove");
-        int i = 0;
+        System.out.println("remover");
+        int value = 1;
+        int expResult = 1;
         CircularList instance = new CircularList();
-        Object expResult = null;
-        Object result = instance.remove(i);
+        instance.addLast(value);
+        int i = 0;
+        Object result = instance.remove(instance.size());
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
@@ -107,14 +122,15 @@ public class CircularListTest {
      */
     @Test
     public void testGet() {
-        System.out.println("get");
-        int i = 0;
+        System.out.println("obtener");
+        int value = 1;
+        int expResult = 1;
         CircularList instance = new CircularList();
-        Object expResult = null;
-        Object result = instance.get(i);
+        instance.addLast(value);
+        int i = 0;
+        Object result = instance.get(instance.size());
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
-    
 }
