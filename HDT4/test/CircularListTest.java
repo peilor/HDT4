@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *	Universidad del Valle de Guatemala
+ * @author Pablo Argueta, Carnet: 13028
+ * @author Alejandro Diaz, Carnet: 13082
+ * Clase Test para la clase CircularList
  */
 
 import org.junit.After;
@@ -11,10 +12,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Alejo
- */
 public class CircularListTest {
     
     public CircularListTest() {
@@ -37,7 +34,7 @@ public class CircularListTest {
     }
 
     /**
-     * Test of size method, of class CircularList.
+     * Probando el método size
      */
     @Test
     public void testSize() {
@@ -51,7 +48,7 @@ public class CircularListTest {
     }
 
     /**
-     * Test of addFirst method, of class CircularList.
+     * Probando el método addFirst
      */
     @Test
     public void testAddFirst() {
@@ -60,11 +57,11 @@ public class CircularListTest {
         CircularList instance = new CircularList();
         instance.addFirst(value);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
-     * Test of addLast method, of class CircularList.
+     * Probando el método addLast
      */
     @Test
     public void testAddLast() {
@@ -73,11 +70,11 @@ public class CircularListTest {
         CircularList instance = new CircularList();
         instance.addLast(value);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
-     * Test of add method, of class CircularList.
+     * Probando el método add
      */
     @Test
     public void testAdd() {
@@ -87,11 +84,11 @@ public class CircularListTest {
         CircularList instance = new CircularList();
         instance.add(i, o);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
-     * Test of remove method, of class CircularList.
+     * Probando el método remove
      */
     @Test
     public void testRemove() {
@@ -102,11 +99,11 @@ public class CircularListTest {
         Object result = instance.remove(i);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
-     * Test of get method, of class CircularList.
+     * Probando el método get
      */
     @Test
     public void testGet() {
@@ -117,7 +114,7 @@ public class CircularListTest {
         Object result = instance.get(i);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }

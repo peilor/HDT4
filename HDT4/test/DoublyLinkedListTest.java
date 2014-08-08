@@ -1,7 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ *	Universidad del Valle de Guatemala
+ * @author Pablo Argueta, Carnet: 13028
+ * @author Alejandro Diaz, Carnet: 13082
+ * Clase Test para la clase DoublyLinkedList
  */
 
 import org.junit.After;
@@ -11,10 +12,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Alejo
- */
 public class DoublyLinkedListTest {
     
     public DoublyLinkedListTest() {
@@ -37,7 +34,7 @@ public class DoublyLinkedListTest {
     }
 
     /**
-     * Test of size method, of class DoublyLinkedList.
+     * Probando el método size 
      */
     @Test
     public void testSize() {
@@ -47,11 +44,11 @@ public class DoublyLinkedListTest {
         int result = instance.size();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
-     * Test of addFirst method, of class DoublyLinkedList.
+     * Probando el método addFirst
      */
     @Test
     public void testAddFirst() {
@@ -60,11 +57,11 @@ public class DoublyLinkedListTest {
         DoublyLinkedList instance = new DoublyLinkedList();
         instance.addFirst(value);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
-     * Test of addLast method, of class DoublyLinkedList.
+     * Probando el método addLast
      */
     @Test
     public void testAddLast() {
@@ -73,11 +70,11 @@ public class DoublyLinkedListTest {
         DoublyLinkedList instance = new DoublyLinkedList();
         instance.addLast(value);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
-     * Test of removeFirst method, of class DoublyLinkedList.
+     * Probando el método removeFirst
      */
     @Test
     public void testRemoveFirst() {
@@ -87,11 +84,11 @@ public class DoublyLinkedListTest {
         Object result = instance.removeFirst();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
-     * Test of removeLast method, of class DoublyLinkedList.
+     * Probando el método removeLast
      */
     @Test
     public void testRemoveLast() {
@@ -101,11 +98,11 @@ public class DoublyLinkedListTest {
         Object result = instance.removeLast();
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
-     * Test of add method, of class DoublyLinkedList.
+     * Probando el método add
      */
     @Test
     public void testAdd() {
@@ -115,11 +112,11 @@ public class DoublyLinkedListTest {
         DoublyLinkedList instance = new DoublyLinkedList();
         instance.add(i, o);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
-     * Test of remove method, of class DoublyLinkedList.
+     *Probando el método remove
      */
     @Test
     public void testRemove() {
@@ -130,11 +127,11 @@ public class DoublyLinkedListTest {
         Object result = instance.remove(i);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
 
     /**
-     * Test of get method, of class DoublyLinkedList.
+     * Probando el método get 
      */
     @Test
     public void testGet() {
@@ -145,7 +142,7 @@ public class DoublyLinkedListTest {
         Object result = instance.get(i);
         assertEquals(expResult, result);
         // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        //fail("The test case is a prototype.");
     }
     
 }
